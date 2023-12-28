@@ -2,7 +2,7 @@ import tkinter as tk
 from tkinter import *
 from tkinter import filedialog
 from pytube import YouTube
-from PIL import Image, ImageTk  # Import the necessary Pillow modules
+from PIL import Image, ImageTk 
 
 class Youtube(tk.Tk):
     def __init__(self):
@@ -13,7 +13,7 @@ class Youtube(tk.Tk):
         self.components()
 
     def components(self):
-        # Open and convert the PNG image to PhotoImage
+   
         img = Image.open("youtube-logo-png-2065.png")
         img = img.resize((250, 250), Image.ANTIALIAS)
         ytlogo = ImageTk.PhotoImage(img)
@@ -22,7 +22,7 @@ class Youtube(tk.Tk):
         self.ytTitle.image = ytlogo  # Keep a reference to prevent garbage collection
         self.ytTitle.place(relx=0.5, rely=0.25, anchor="center")
 
-        # Youtube link
+       
         self.ytlabel = Label(text="Youtube Link")
         self.ytlabel.place(x=25, y=150)
 
